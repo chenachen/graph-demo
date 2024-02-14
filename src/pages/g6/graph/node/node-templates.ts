@@ -100,4 +100,10 @@ export const CUSTOM_NODE: ModelConfig = {
   type: NodeType.CUSTOM,
   label: "自定义节点",
   size: [100, 80],
+  linkPoints: {
+    top: true,
+    right: true,
+    bottom: true,
+    left: true,
+  },
 };

@@ -23,6 +23,9 @@ export function createGraph(
       ],
     },
     layout: { type: "force2", direction: "LR", preventOverlap: true },
+    defaultEdge: {
+      type: "cubic",
+    },
     plugins: [miniMap],
   });
 

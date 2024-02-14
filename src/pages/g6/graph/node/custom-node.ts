@@ -25,34 +25,61 @@ registerNode(NodeType.CUSTOM, {
         height,
         stroke: "black",
         radius: [2, 4],
+        linkPoints: {
+          top: true,
+          right: true,
+          bottom: true,
+          left: true,
+        },
+      },
+    });
+
+    group.addShape("circle", {
+      name: "top-link-point",
+      attrs: {
+        x: width / 2,
+        y: 0,
+        r: 4,
+        stroke: "black",
+      },
+    });
+
+    group.addShape("circle", {
+      name: "left-link-point",
+      attrs: {
+        x: 0,
+        y: height / 2,
+        r: 4,
+        stroke: "black",
       },
     });
 
     group.addShape("circle", {
       name: "custom-circle",
       attrs: {
-        x: 50,
-        y: 70,
-        r: 10,
+        x: width,
+        y: height / 2,
+        r: 4,
         stroke: "black",
       },
     });
 
-    group.addShape("marker", {
+    group.addShape("circle", {
+      name: "custom-circle",
       attrs: {
-        x: 50,
-        y: 50,
-        r: 10,
+        x: width / 2,
+        y: height,
+        r: 4,
         stroke: "black",
-        symbol: "triangle-down",
       },
-      name: "marker-shape",
     });
+
+    // todo：添加create-edge行为
 
     group.addShape("image", {
       attrs: {
-        x: 0,
-        y: 0,
+        x: width / 2 - 15,
+        y: 40,
         width: 30,
         height: 30,
         img,
